@@ -22,7 +22,7 @@ class Fraction {
         }
     }
     //Adding two Fraction
-    Fraction add(Fraction f1) {
+    Fraction add(Fraction const &f1) {
         int denominator = this->denominator*f1.denominator;
         int numerator = (denominator / this->denominator)* (this->numerator) + (denominator / f1.denominator)*f1.numerator;
         Fraction f2(numerator, denominator);
@@ -30,5 +30,9 @@ class Fraction {
         return f2;
 
     }
-
+    void multiply(Fraction const &f1) {
+        this->numerator = this->numerator*f1.numerator;
+        this->denominator = this->denominator*f1.denominator;
+        simplify();
+    }
 };
