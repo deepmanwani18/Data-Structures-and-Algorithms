@@ -11,4 +11,7 @@ int main() {
     Fraction f2(a2, b2);
     Fraction f3 = f1.add(f2);
     f3.printFraction();
+    f1.multiply(f2);
+    f1.printFraction();
+    f3.printFraction();
 }
